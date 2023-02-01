@@ -7,6 +7,7 @@ export const globalStyles = globalCss({
         boxSizing: "border-box",
         border: "none",
         listStyle: "none",
+        textDecoration: "none",
         fontFamily: "Poppins, sans-serif",
     },
     html: {
