@@ -38,7 +38,7 @@ export function SectionHero() {
                 </ul>
             </AreaSocial>
             <ContextText>
-                <div class="left">
+                <div className="left">
                     <h3>COMING SON</h3>
                     <h1>Marvel's WHAT IF... ?</h1>
                     <p>Maecenas tristique eu quam sed pretium. Pellentesque sagittis elit et porttitor consequat. Nam augue turpis, tincidunt commodo lacus at, auctor suscipit ex</p>
