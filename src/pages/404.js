@@ -1,5 +1,11 @@
+import { ComponentNotFound } from "../components/NotFound"
+import { PageTitle } from "../components/PageTitle"
+
 export default function PageNotFound() {
     return (
-        <h1>Página não encontrada</h1>
+        <>
+            <PageTitle title="What if? - Codeboost | Página não encontrada"  description="um projeto desenvolvido no curso codeboost" />
+            <ComponentNotFound />
+        </>
     )
 }
