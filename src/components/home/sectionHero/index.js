@@ -5,6 +5,7 @@ import IconYoutube from '../../../assets/youtube.svg';
 import IconInstagram from '../../../assets/instagram.svg';
 import Image from 'next/image';
 import { PopupVideo } from '../../popupVideo';
+import { useEffect } from 'react';
 
 const socials = [
     {
@@ -19,7 +20,12 @@ const socials = [
     }
 ]
 
-export function SectionHero() {
+export function SectionHero({ data }) {
+
+    useEffect(() => {
+        console.log(data);
+    }, [])
+
     return <SectionHeroStyle>
         <Container>
             <AreaSocial>
@@ -39,12 +45,14 @@ export function SectionHero() {
             </AreaSocial>
             <ContextText>
                 <div className="left">
-                    <h3>COMING SON</h3>
-                    <h1>Marvel's WHAT IF... ?</h1>
-                    <p>Maecenas tristique eu quam sed pretium. Pellentesque sagittis elit et porttitor consequat. Nam augue turpis, tincidunt commodo lacus at, auctor suscipit ex</p>
-                    <a href="" target="_blank">Saiba mais</a>
+                    <h3>{ data.subtitle_hero }</h3>
+                    <h1>{ data.title_hero }</h1>
+                    <p>{data.description_hero[0].text}</p>
+                    <a href={data.url_button.url} target="_blank" rel="noreferrer">
+                        {data.label_button}
+                    </a>
                 </div>
-                <PopupVideo />
+                <PopupVideo label={data.label_trailer} thumb={data.thumbnail_trailer.url}/>
             </ContextText>
         </Container>
     </SectionHeroStyle>
