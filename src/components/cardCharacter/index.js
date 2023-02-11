@@ -9,7 +9,7 @@ export function CardCharacter({image, name, slug}) {
         <StyleCard>
             <Link href={`/character/${slug}`}>
                 <div className="image">
-                    <Image src={image} alt="Imagem do personagem"/>
+                    <Image src={image} width={280} height={372} alt="Imagem do personagem" />
                 </div>
                 <div className="info">
                     <div>

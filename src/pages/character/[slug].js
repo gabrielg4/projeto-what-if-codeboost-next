@@ -7,7 +7,6 @@ export default function PageCharacter() {
         <>
             <PageTitle title="What if? - Codeboost | Página de detalhes" description="página de detalhes do personagem tal" />
             <SectionHeroCharacter />
-            <ListCharacters />
         </>
     )
 }

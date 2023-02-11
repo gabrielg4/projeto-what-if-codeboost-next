@@ -7,46 +7,8 @@ import ImageCharacter from '../../assets/character.jpg'
 
 import LogoMarvel from '../../assets/logo.svg';
 
-const characters = [
-    {
-        name: "Killmonger",
-        image: ImageCharacter,
-        slug: "/killmonger"
-    },
-    {
-        name: "Captain Carter",
-        image: ImageCharacter,
-        slug: "/captain-carter"
-    },
-    {
-        name: "Captain Carter",
-        image: ImageCharacter,
-        slug: "/captain-carter"
-    },
-    {
-        name: "Captain Carter",
-        image: ImageCharacter,
-        slug: "/captain-carter"
-    },
-    {
-        name: "Captain Carter",
-        image: ImageCharacter,
-        slug: "/captain-carter"
-    },
-    {
-        name: "Captain Carter",
-        image: ImageCharacter,
-        slug: "/captain-carter"
-    },
-    {
-        name: "Captain Carter",
-        image: ImageCharacter,
-        slug: "/captain-carter"
-    },
-]
 
-
-export function ListCharacters() {
+export function ListCharacters({ data }) {
     return (
         <StyleListCharacter>
             <Container>
@@ -56,13 +18,13 @@ export function ListCharacters() {
                 </div>
                 <StyleListCharacters>
                         {
-                            characters.map(({name, image, slug}) => {
+                            data.map(character  => {
                                 return (
                                     <CardCharacter 
-                                        key={name} 
-                                        image={image} 
-                                        slug={slug}
-                                        name={name} 
+                                        key={character.id} 
+                                        image={character.data.image_character.url} 
+                                        slug={character.data.slug}
+                                        name={character.data.name_character} 
                                     />
                                 )
                             })
